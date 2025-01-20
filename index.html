@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Guide</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: blue;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      margin: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" id="home-tab" onclick="showContent('home')">Top 10 Cryptos</a>
+    <a href="#" id="about-tab" onclick="showContent('about')">What is Crypto?</a>
+  </nav>
+  <div id="home" class="content">
+    <h1>Top 10 Cryptocurrencies</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Cryptocurrency</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Bitcoin</td>
+                <td>BTC</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ethereum</td>
+                <td>ETH</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>KUB</td>
+                <td>KUB Coin</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>XRP</td>
+                <td>XRP</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Cardano</td>
+                <td>ADA</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Dogecoin</td>
+                <td>DOGE</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Solana</td>
+                <td>SOL</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Polygon</td>
+                <td>MATIC</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Polkadot</td>
+                <td>DOT</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Litecoin</td>
+                <td>LTC</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+  <div id="about" class="content hidden">
+    <h1>What is Cryptocurrency?</h1>
+    <p>Cryptocurrency is a digital or virtual currency that uses cryptography for security. It operates independently of a central bank.</p>
+    <p>Examples of cryptocurrencies include Bitcoin, Ethereum, and many others.</p>
+  </div>
+
+  <script>
+    function showContent(section) {
+      document.querySelectorAll('.content').forEach(content => content.classList.add('hidden'));
+      document.getElementById(section).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
